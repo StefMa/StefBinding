@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">StefBinding</string>
+    <string name="action_settings">Settings</string>
+    <string name="paypal">Paypal</string>
+    <string name="Cash">Cash</string>
+    <string name="credit_card">Credit card</string>
+    <string name="check_me">Check me :)</string>
+    <string name="Switch">Switch</string>
+</resources>

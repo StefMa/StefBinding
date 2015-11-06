@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -65,10 +66,20 @@
             <TextView
                 android:id="@+id/text"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center_vertical|center_horizontal"
+                android:minHeight="100dp"
                 android:text="@{fragmentModel.textText}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                app:defaultImage='@{"https://media2.wnyc.org/i/620/372/l/80/1/blackbox.jpeg"}'
+                app:imageURI="@{fragmentModel.loadImage}"
+                tools:ignore="ContentDescription" />
         </LinearLayout>
 
     </LinearLayout>

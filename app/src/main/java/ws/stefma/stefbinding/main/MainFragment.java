@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
+
 import ws.stefma.stefbinding.R;
 import ws.stefma.stefbinding.databinding.FragmentMainBinding;
 import ws.stefma.stefbinding.main.models.MainFragmentModel;

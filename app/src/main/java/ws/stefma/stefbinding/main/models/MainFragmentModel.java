@@ -2,8 +2,12 @@ package ws.stefma.stefbinding.main.models;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
+import android.databinding.BindingAdapter;
+import android.net.Uri;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
+
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import ws.stefma.stefbinding.BR;
 
@@ -77,11 +81,29 @@ public class MainFragmentModel extends BaseObservable {
     public void radioChangeListener(RadioGroup radioGroup, int position) {
         this.radioPos = position;
         notifyPropertyChanged(BR.textText);
+        notifyPropertyChanged(BR.loadImage);
     }
 
-    public void switchChangeListener(CompoundButton compoundButton, boolean b) {
-        this.isSwitched = b;
+    public void switchChangeListener(CompoundButton compoundButton, boolean value) {
+        this.isSwitched = value;
         notifyPropertyChanged(BR.textText);
+    }
+
+    @Bindable
+    public Uri getLoadImage() {
+        String uri = "https://media2.wnyc.org/i/620/372/l/80/1/blackbox.jpeg";
+        switch (this.radioPos) {
+            case 1:
+                uri = "http://i.imgur.com/citrr4S.jpg";
+                break;
+            case 2:
+                uri = "http://i.imgur.com/SoMf5uc.jpg";
+                break;
+            case 3:
+                uri = "http://i.imgur.com/kpvRgUI.jpg";
+                break;
+        }
+        return Uri.parse(uri);
     }
 
     @SuppressWarnings("StringBufferReplaceableByString")

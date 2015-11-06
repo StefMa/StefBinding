@@ -14,6 +14,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:actualImageScaleType="fitCenter"
+            app:defaultImage='@{"http://i.imgur.com/PMTUoIF.png"}' />
+
         <EditText
             android:id="@+id/login_username"
             android:layout_width="match_parent"

@@ -1,9 +1,13 @@
 package ws.stefma.stefbinding.models;
 
 import android.content.Intent;
+import android.databinding.BindingAdapter;
+import android.net.Uri;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import ws.stefma.stefbinding.RegisterActivity;
 import ws.stefma.stefbinding.main.MainActivity;
@@ -98,6 +102,11 @@ public class LoginModel {
                 log = editable.toString();
             }
         };
+    }
+
+    @BindingAdapter("defaultImage")
+    public static void setLoadDefaultImage(SimpleDraweeView imageView, String uri) {
+        imageView.setImageURI(Uri.parse(uri));
     }
 
 }

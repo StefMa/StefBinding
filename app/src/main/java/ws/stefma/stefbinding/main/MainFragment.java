@@ -14,19 +14,13 @@ import ws.stefma.stefbinding.main.models.MainFragmentModel;
 
 public class MainFragment extends Fragment {
 
-    private FragmentMainBinding viewBinding;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        viewBinding = DataBindingUtil.inflate(LayoutInflater.from(getContext()), R.layout.fragment_main, container, false);
+        FragmentMainBinding viewBinding = DataBindingUtil.inflate(LayoutInflater.from(getContext()), R.layout.fragment_main, container, false);
         viewBinding.getRoot().setBackgroundResource(R.color.colorPrimaryDark);
         viewBinding.setFragmentModel(new MainFragmentModel());
         return viewBinding.getRoot();
     }
 
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-
-    }
 }

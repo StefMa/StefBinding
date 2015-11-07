@@ -10,6 +10,7 @@ import android.widget.RadioGroup;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import ws.stefma.stefbinding.BR;
+import ws.stefma.stefbinding.R;
 
 @SuppressWarnings("unused")
 public class MainFragmentModel extends BaseObservable {
@@ -93,13 +94,13 @@ public class MainFragmentModel extends BaseObservable {
     public Uri getLoadImage() {
         String uri = "https://media2.wnyc.org/i/620/372/l/80/1/blackbox.jpeg";
         switch (this.radioPos) {
-            case 1:
+            case R.id.credit_card:
                 uri = "http://i.imgur.com/citrr4S.jpg";
                 break;
-            case 2:
+            case R.id.cash:
                 uri = "http://i.imgur.com/SoMf5uc.jpg";
                 break;
-            case 3:
+            case R.id.paypal:
                 uri = "http://i.imgur.com/kpvRgUI.jpg";
                 break;
         }
@@ -123,11 +124,11 @@ public class MainFragmentModel extends BaseObservable {
 
     private String getRadioPos() {
         switch (this.radioPos) {
-            case 1:
+            case R.id.credit_card:
                 return this.creditCard;
-            case 2:
+            case R.id.cash:
                 return this.cash;
-            case 3:
+            case R.id.paypal:
                 return this.paypal;
             default:
                 return "Nothing";

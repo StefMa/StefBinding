@@ -38,17 +38,20 @@
                 app:onCheckedChangeListener="@{fragmentModel.radioChangeListener}">
 
                 <RadioButton
+                    android:id="@+id/credit_card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@{fragmentModel.creditCard}" />
 
                 <RadioButton
+                    android:id="@+id/cash"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@{fragmentModel.cash}" />
 
                 <RadioButton
+                    android:id="@+id/paypal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"

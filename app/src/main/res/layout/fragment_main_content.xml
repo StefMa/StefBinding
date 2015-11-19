@@ -70,7 +70,7 @@
             android:text="@{fragmentModel.textText}"
             android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
-        <com.facebook.drawee.view.SimpleDraweeView
+        <ws.stefma.stefbinding.main.BindingImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal"

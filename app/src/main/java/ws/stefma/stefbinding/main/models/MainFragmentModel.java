@@ -2,12 +2,9 @@ package ws.stefma.stefbinding.main.models;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
-import android.databinding.BindingAdapter;
 import android.net.Uri;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
-
-import com.facebook.drawee.view.SimpleDraweeView;
 
 import ws.stefma.stefbinding.BR;
 import ws.stefma.stefbinding.R;

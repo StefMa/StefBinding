@@ -6,8 +6,9 @@ import android.net.Uri;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.ImageView;
 
-import com.facebook.drawee.view.SimpleDraweeView;
+import com.bumptech.glide.Glide;
 
 import ws.stefma.stefbinding.RegisterActivity;
 import ws.stefma.stefbinding.main.MainActivity;
@@ -105,8 +106,8 @@ public class LoginModel {
     }
 
     @BindingAdapter("defaultImage")
-    public static void setLoadDefaultImage(SimpleDraweeView imageView, String uri) {
-        imageView.setImageURI(Uri.parse(uri));
+    public static void setLoadDefaultImage(ImageView imageView, String uri) {
+        Glide.with(imageView.getContext()).load(uri).into(imageView);
     }
 
 }

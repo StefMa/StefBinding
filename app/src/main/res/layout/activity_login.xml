@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.facebook.drawee.view.SimpleDraweeView
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
@@ -23,7 +23,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            app:actualImageScaleType="fitCenter"
+            android:scaleType="fitCenter"
             app:defaultImage='@{"http://i.imgur.com/PMTUoIF.png"}' />
 
         <EditText

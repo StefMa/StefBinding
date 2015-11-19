@@ -2,9 +2,14 @@ package ws.stefma.stefbinding.main.models;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
+import android.databinding.BindingAdapter;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
+
+import com.bumptech.glide.Glide;
 
 import ws.stefma.stefbinding.BR;
 import ws.stefma.stefbinding.R;
@@ -130,5 +135,10 @@ public class MainFragmentModel extends BaseObservable {
             default:
                 return "Nothing";
         }
+    }
+
+    @BindingAdapter({"defaultImage", "placeholder"})
+    public static void setLoadDefaultImage(ImageView imageView, String uri, Drawable placeholder) {
+        Glide.with(imageView.getContext()).load(uri).placeholder(placeholder).into(imageView);
     }
 }

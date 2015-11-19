@@ -77,6 +77,7 @@
             android:layout_marginTop="16dp"
             app:defaultImage='@{"https://media2.wnyc.org/i/620/372/l/80/1/blackbox.jpeg"}'
             app:imageURI="@{fragmentModel.loadImage}"
+            app:placeholder="@{@drawable/ic_placeholder}"
             tools:ignore="ContentDescription" />
     </LinearLayout>
 </layout>

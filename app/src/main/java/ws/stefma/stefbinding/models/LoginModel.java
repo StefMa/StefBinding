@@ -2,6 +2,7 @@ package ws.stefma.stefbinding.models;
 
 import android.content.Intent;
 import android.databinding.BindingAdapter;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
+import ws.stefma.stefbinding.R;
 import ws.stefma.stefbinding.RegisterActivity;
 import ws.stefma.stefbinding.main.MainActivity;
 

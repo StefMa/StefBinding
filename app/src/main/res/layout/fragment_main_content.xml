@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="fragmentModel"
+            type="ws.stefma.stefbinding.main.models.MainFragmentModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/fragment_main_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{fragmentModel.checkMe}"
+            app:checked="@{fragmentModel.isChecked}"
+            app:onCheckedChangeListener="@{fragmentModel.checkChangeListener}" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:onCheckedChangeListener="@{fragmentModel.radioChangeListener}">
+
+            <RadioButton
+                android:id="@+id/credit_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{fragmentModel.creditCard}" />
+
+            <RadioButton
+                android:id="@+id/cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{fragmentModel.cash}" />
+
+            <RadioButton
+                android:id="@+id/paypal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{fragmentModel.paypal}" />
+        </RadioGroup>
+
+        <Switch
+            android:id="@+id/switch_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{fragmentModel.switchMe}"
+            app:onCheckedChangeListener="@{fragmentModel.switchChangeListener}" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:minHeight="100dp"
+            android:text="@{fragmentModel.textText}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            app:defaultImage='@{"https://media2.wnyc.org/i/620/372/l/80/1/blackbox.jpeg"}'
+            app:imageURI="@{fragmentModel.loadImage}"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+</layout>

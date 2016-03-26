@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Toast;
 
@@ -13,12 +11,17 @@ import android.widget.Toast;
 public class RegisterModel {
 
     private String username = "";
+
     private String password = "";
+
     private String mail = "";
 
     private String button = "Register";
+
     private String usernameHint = "Username";
+
     private String passwordHint = "Password";
+
     private String mailHint = "Mail";
 
     public String getButton() {
@@ -53,6 +56,30 @@ public class RegisterModel {
         this.mailHint = mailHint;
     }
 
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public void registerClick(final View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext())
                 .setTitle("Want register:")
@@ -77,60 +104,4 @@ public class RegisterModel {
                 "Mail: " + mail;
     }
 
-    public TextWatcher usernameChanged() {
-        return new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                username = editable.toString();
-            }
-        };
-    }
-
-    public TextWatcher passwordChanged() {
-        return new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                password = editable.toString();
-            }
-        };
-    }
-
-    public TextWatcher mailChanged() {
-        return new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                mail = editable.toString();
-            }
-        };
-    }
 }

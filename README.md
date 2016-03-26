@@ -13,3 +13,4 @@ Simply clone this repo and open the `build.gradle` in the root directory with An
 * [Droidcon New York 15](https://www.youtube.com/watch?v=WdUbXWztKNY)
 * [Stablekernel](http://blog.stablekernel.com/mvvm-on-android-using-the-data-binding-library/)
 * [Android Authority](http://www.androidauthority.com/android-m-data-binding-615674/)
+* [Halfthought](https://halfthought.wordpress.com/2016/03/23/2-way-data-binding-on-android/)
